@@ -16,5 +16,18 @@ Pastikan Docker berjalan sebelum menggunakan perintah-perintah ini.
   npm run env:install
    ```
 
+### Menjalankan Unit Test
 
-testtt
+npm run test:php -- --filter Tests_User_CountUserPosts
+npm run test:php -- --filter Tests_User_GetActiveBlogForUser
+npm run test:php -- --filter Tests_Admin_IncludesComment
+npm run test:php -- --filter Tests_Admin_IncludesUser
+npm run test:php -- --filter Tests_Formatting_Redirect
+npm run test:php -- --filter Tests_Admin_wpThemeInstallListTable
+
+### Menjalankan E2E Test
+Pastikan wordpress-develop sudah berjalan di port 8889
+Jalankan Sript e2eTest.py dengan perintah
+```shell
+pytest e2eTest.py
+```
