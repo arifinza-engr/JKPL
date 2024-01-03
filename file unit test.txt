@@ -1,0 +1,6 @@
+admin/includesComment
+admin/includesUser
+admin/wpThemeIstallListTable
+formatting/redirect
+user/countUserPost
+user/getActiveBlogForUser

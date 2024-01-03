@@ -1,0 +1,617 @@
+{
+  "id": "477373a0-a33f-4273-8882-07db38509afc",
+  "version": "2.0",
+  "name": "Wordpress",
+  "url": "http://localhost:8889",
+  "tests": [{
+    "id": "eb90b1f0-0ad2-4259-b782-224f91a261b1",
+    "name": "1 Login",
+    "commands": [{
+      "id": "adb9e119-63b0-4cff-810b-a02bdd15d8f6",
+      "comment": "",
+      "command": "open",
+      "target": "/wp-login.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d596580b-f579-431d-99e3-9d94b8e125a4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "beceeb11-136a-457a-a10e-1c46b3f17d58",
+      "comment": "",
+      "command": "type",
+      "target": "id=user_login",
+      "targets": [
+        ["id=user_login", "id"],
+        ["name=log", "name"],
+        ["css=#user_login", "css:finder"],
+        ["xpath=//input[@id='user_login']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/p/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "9f928321-28f1-471c-b099-6822f32e11ec",
+      "comment": "",
+      "command": "type",
+      "target": "id=user_pass",
+      "targets": [
+        ["id=user_pass", "id"],
+        ["name=pwd", "name"],
+        ["css=#user_pass", "css:finder"],
+        ["xpath=//input[@id='user_pass']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "password"
+    }, {
+      "id": "8159dde6-42c2-4041-9ca0-a8e12d0df267",
+      "comment": "",
+      "command": "click",
+      "target": "id=wp-submit",
+      "targets": [
+        ["id=wp-submit", "id"],
+        ["name=wp-submit", "name"],
+        ["css=#wp-submit", "css:finder"],
+        ["xpath=//input[@id='wp-submit']", "xpath:attributes"],
+        ["xpath=//form[@id='loginform']/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ba4d4c42-6d75-4c20-971a-70e44c8600ab",
+    "name": "2 Add User",
+    "commands": [{
+      "id": "1fdde70d-29a4-44b2-a535-01a7065f838e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c16128b-eae3-456e-b537-18066fa1e5f8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d1e1a7c-4455-44d4-890f-847fc6ba069b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=WordPress Develop",
+      "targets": [
+        ["linkText=WordPress Develop", "linkText"],
+        ["css=#wp-admin-bar-site-name > .ab-item", "css:finder"],
+        ["xpath=//a[contains(text(),'WordPress Develop')]", "xpath:link"],
+        ["xpath=//li[@id='wp-admin-bar-site-name']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8889/wp-admin/']", "xpath:href"],
+        ["xpath=//div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'WordPress Develop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8f0313f-f9d5-45c8-bc4a-245dc83479fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu-icon-users > .wp-menu-name",
+      "targets": [
+        ["css=.menu-icon-users > .wp-menu-name", "css:finder"],
+        ["xpath=//li[@id='menu-users']/a/div[3]", "xpath:idRelative"],
+        ["xpath=//li[10]/a/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "751e3481-25ae-4bdf-97f8-632f864ca9d1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Add New User",
+      "targets": [
+        ["linkText=Add New User", "linkText"],
+        ["css=#menu-users li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Add New User')]", "xpath:link"],
+        ["xpath=//li[@id='menu-users']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'user-new.php')]", "xpath:href"],
+        ["xpath=//li[10]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add New User')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "962728e0-ebd0-4474-913f-09673845a8b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=user_login",
+      "targets": [
+        ["id=user_login", "id"],
+        ["name=user_login", "name"],
+        ["css=#user_login", "css:finder"],
+        ["xpath=//input[@id='user_login']", "xpath:attributes"],
+        ["xpath=//form[@id='createuser']/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f869e923-f720-48b4-8736-f4d2d619d5b5",
+      "comment": "",
+      "command": "type",
+      "target": "id=user_login",
+      "targets": [
+        ["id=user_login", "id"],
+        ["name=user_login", "name"],
+        ["css=#user_login", "css:finder"],
+        ["xpath=//input[@id='user_login']", "xpath:attributes"],
+        ["xpath=//form[@id='createuser']/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": "maman"
+    }, {
+      "id": "fcc003f9-5b49-4530-a163-b625ab54fc72",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='createuser']/table/tbody/tr[2]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e44ddad5-0542-474e-912f-cb8359f90efc",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='createuser']/table/tbody/tr[2]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td/input", "xpath:position"]
+      ],
+      "value": "maman@gmail.com"
+    }, {
+      "id": "0689e671-4bf2-412c-929f-8b5052631b0d",
+      "comment": "",
+      "command": "click",
+      "target": "id=first_name",
+      "targets": [
+        ["id=first_name", "id"],
+        ["name=first_name", "name"],
+        ["css=#first_name", "css:finder"],
+        ["xpath=//input[@id='first_name']", "xpath:attributes"],
+        ["xpath=//form[@id='createuser']/table/tbody/tr[3]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee10c4c9-7b42-47cd-9af9-3cb4d24870f3",
+      "comment": "",
+      "command": "click",
+      "target": "id=first_name",
+      "targets": [
+        ["id=first_name", "id"],
+        ["name=first_name", "name"],
+        ["css=#first_name", "css:finder"],
+        ["xpath=//input[@id='first_name']", "xpath:attributes"],
+        ["xpath=//form[@id='createuser']/table/tbody/tr[3]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "545e1260-f365-4696-a8ba-8a2f31af9937",
+      "comment": "",
+      "command": "type",
+      "target": "id=first_name",
+      "targets": [
+        ["id=first_name", "id"],
+        ["name=first_name", "name"],
+        ["css=#first_name", "css:finder"],
+        ["xpath=//input[@id='first_name']", "xpath:attributes"],
+        ["xpath=//form[@id='createuser']/table/tbody/tr[3]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td/input", "xpath:position"]
+      ],
+      "value": "Maman"
+    }, {
+      "id": "34d1fd6a-0653-4007-9c7b-ded08c352430",
+      "comment": "",
+      "command": "click",
+      "target": "id=last_name",
+      "targets": [
+        ["id=last_name", "id"],
+        ["name=last_name", "name"],
+        ["css=#last_name", "css:finder"],
+        ["xpath=//input[@id='last_name']", "xpath:attributes"],
+        ["xpath=//form[@id='createuser']/table/tbody/tr[4]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "816d37d9-a4ca-48d1-b2bd-5b19b995872e",
+      "comment": "",
+      "command": "type",
+      "target": "id=last_name",
+      "targets": [
+        ["id=last_name", "id"],
+        ["name=last_name", "name"],
+        ["css=#last_name", "css:finder"],
+        ["xpath=//input[@id='last_name']", "xpath:attributes"],
+        ["xpath=//form[@id='createuser']/table/tbody/tr[4]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": "Suparman"
+    }, {
+      "id": "37f401b7-791d-4748-a219-0352af42b25c",
+      "comment": "",
+      "command": "click",
+      "target": "id=url",
+      "targets": [
+        ["id=url", "id"],
+        ["name=url", "name"],
+        ["css=#url", "css:finder"],
+        ["xpath=//input[@id='url']", "xpath:attributes"],
+        ["xpath=//form[@id='createuser']/table/tbody/tr[5]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "048a3dcb-14b1-429f-8482-f72ad8dbf6db",
+      "comment": "",
+      "command": "type",
+      "target": "id=url",
+      "targets": [
+        ["id=url", "id"],
+        ["name=url", "name"],
+        ["css=#url", "css:finder"],
+        ["xpath=//input[@id='url']", "xpath:attributes"],
+        ["xpath=//form[@id='createuser']/table/tbody/tr[5]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td/input", "xpath:position"]
+      ],
+      "value": "localhost:1717"
+    }, {
+      "id": "36c58cf7-a1eb-4008-9468-5676c8775b6d",
+      "comment": "",
+      "command": "type",
+      "target": "id=url",
+      "targets": [
+        ["id=url", "id"],
+        ["name=url", "name"],
+        ["css=#url", "css:finder"],
+        ["xpath=//input[@id='url']", "xpath:attributes"],
+        ["xpath=//form[@id='createuser']/table/tbody/tr[5]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td/input", "xpath:position"]
+      ],
+      "value": "localhost:8888"
+    }, {
+      "id": "54675223-64cc-4b18-a719-361149e72ca4",
+      "comment": "",
+      "command": "click",
+      "target": "id=createusersub",
+      "targets": [
+        ["id=createusersub", "id"],
+        ["css=#createusersub", "css:finder"],
+        ["xpath=//input[@id='createusersub']", "xpath:attributes"],
+        ["xpath=//form[@id='createuser']/p/input", "xpath:idRelative"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "eb395f1f-301f-47c7-9557-92a8191f2d74",
+    "name": "3 Edit Komen",
+    "commands": [{
+      "id": "b53bb5e5-a2a3-489c-a62b-6644b0f74975",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3ccaa85-7d46-41ce-b50c-bd236fea743d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b2a723e-9ddf-46bf-8a10-035c41a79e6b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=WordPress Develop",
+      "targets": [
+        ["linkText=WordPress Develop", "linkText"],
+        ["css=#wp-admin-bar-site-name > .ab-item", "css:finder"],
+        ["xpath=//a[contains(text(),'WordPress Develop')]", "xpath:link"],
+        ["xpath=//li[@id='wp-admin-bar-site-name']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8889/wp-admin/']", "xpath:href"],
+        ["xpath=//div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'WordPress Develop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d91e6582-7de5-4a99-8384-9cfef6abb3e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu-icon-comments > .wp-menu-name",
+      "targets": [
+        ["css=.menu-icon-comments > .wp-menu-name", "css:finder"],
+        ["xpath=//li[@id='menu-comments']/a/div[3]", "xpath:idRelative"],
+        ["xpath=//li[6]/a/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f53dfd97-d03e-498e-a8cd-a98d0feec937",
+      "comment": "",
+      "command": "click",
+      "target": "css=.has-row-actions",
+      "targets": [
+        ["css=.has-row-actions", "css:finder"],
+        ["xpath=//tr[@id='comment-1']/td[2]", "xpath:idRelative"],
+        ["xpath=//td[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f65b43e-9e41-4c86-978c-e84ad972b92e",
+      "comment": "",
+      "command": "open",
+      "target": "wp-admin/comment.php?action=editcomment&c=1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08c0e5db-ef01-4134-a7bc-3125b2bc0acc",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=newcomment_author", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[@id='namediv']/div/fieldset/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11bf5a69-1887-4cd4-a900-9db1e4204eb5",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [],
+      "value": "Hendra Kumbara"
+    }, {
+      "id": "df8fcc74-8f94-4fee-828d-14dca80d0155",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=newcomment_author_email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='namediv']/div/fieldset/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7aeb0c81-812f-49c9-b7f1-1413e327c98c",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [],
+      "value": "testes@gmail.com"
+    }, {
+      "id": "c47db4b6-71c7-42e1-9cf8-35596ba56b8d",
+      "comment": "",
+      "command": "click",
+      "target": "id=content",
+      "targets": [
+        ["id=content", "id"],
+        ["name=content", "name"],
+        ["css=#content", "css:finder"],
+        ["xpath=//textarea[@id='content']", "xpath:attributes"],
+        ["xpath=//div[@id='wp-content-editor-container']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58a5cbbf-2d08-40b1-8141-37b9eeb437b2",
+      "comment": "",
+      "command": "type",
+      "target": "id=content",
+      "targets": [],
+      "value": "Halo saya telah mengedit komen"
+    }, {
+      "id": "49f651ba-4632-4941-9215-1195807ec7fd",
+      "comment": "",
+      "command": "click",
+      "target": "id=save",
+      "targets": [
+        ["id=save", "id"],
+        ["name=save", "name"],
+        ["css=#save", "css:finder"],
+        ["xpath=//input[@id='save']", "xpath:attributes"],
+        ["xpath=//div[@id='publishing-action']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "16f29cdf-06d1-443e-847e-345585e57eb8",
+    "name": "4 Ubah Tema",
+    "commands": [{
+      "id": "5aafb96b-10ae-4e34-aac9-b234e929d7c0",
+      "comment": "",
+      "command": "open",
+      "target": "/wp-admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c75a8ca-41de-4725-968e-2675069bf490",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f093c84-d2f3-4072-a180-5fcab656394e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu-icon-appearance > .wp-menu-name",
+      "targets": [
+        ["css=.menu-icon-appearance > .wp-menu-name", "css:finder"],
+        ["xpath=//li[@id='menu-appearance']/a/div[3]", "xpath:idRelative"],
+        ["xpath=//li[8]/a/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21e58e95-49c0-4689-bfe4-96924bf62e66",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Activate",
+      "targets": [
+        ["linkText=Activate", "linkText"],
+        ["css=.theme:nth-child(2) .activate", "css:finder"],
+        ["xpath=//a[contains(text(),'Activate')]", "xpath:link"],
+        ["xpath=//div[@id='wpbody-content']/div[3]/div[2]/div/div[2]/div[3]/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8889/wp-admin/themes.php?action=activate&stylesheet=astra&_wpnonce=a676d58502']", "xpath:href"],
+        ["xpath=//div[2]/div[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Activate')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4963ba1-3d25-4cc0-94a5-cbbf0bd948cc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Visit site",
+      "targets": [
+        ["linkText=Visit site", "linkText"],
+        ["css=#message2 a", "css:finder"],
+        ["xpath=//a[contains(text(),'Visit site')]", "xpath:link"],
+        ["xpath=//div[@id='message2']/p/a", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://localhost:8889/'])[3]", "xpath:href"],
+        ["xpath=//div[2]/div/div[3]/div/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Visit site')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5a22e8f6-3e1c-4594-968f-135bafa23c85",
+    "name": "5 Install Plugin",
+    "commands": [{
+      "id": "6d95904d-9310-4481-b10c-ebb9feba21a8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5079e81-ab5d-4845-ab10-e9726bfd1be5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05a0bb17-5cd2-49f5-9806-03b8507e0ed6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=WordPress Develop",
+      "targets": [
+        ["linkText=WordPress Develop", "linkText"],
+        ["css=#wp-admin-bar-site-name > .ab-item", "css:finder"],
+        ["xpath=//a[contains(text(),'WordPress Develop')]", "xpath:link"],
+        ["xpath=//li[@id='wp-admin-bar-site-name']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8889/wp-admin/']", "xpath:href"],
+        ["xpath=//div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'WordPress Develop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd9379d1-e009-4470-a8fb-1462d5d47a1e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu-icon-plugins > .wp-menu-name",
+      "targets": [
+        ["css=.menu-icon-plugins > .wp-menu-name", "css:finder"],
+        ["xpath=//li[@id='menu-plugins']/a/div[3]", "xpath:idRelative"],
+        ["xpath=//li[9]/a/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "66f6c9fb-f178-496d-bc0a-1704620bb25f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.page-title-action",
+      "targets": [
+        ["css=.page-title-action", "css:finder"],
+        ["xpath=(//a[contains(text(),'Add New Plugin')])[2]", "xpath:link"],
+        ["xpath=//div[@id='wpbody-content']/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8889/wp-admin/plugin-install.php']", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b071708-e394-495b-8dd9-317eaa000e0c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Popular",
+      "targets": [
+        ["linkText=Popular", "linkText"],
+        ["css=.plugin-install-popular > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Popular')]", "xpath:link"],
+        ["xpath=//div[@id='wpbody-content']/div[3]/div[2]/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8889/wp-admin/plugin-install.php?tab=popular']", "xpath:href"],
+        ["xpath=//div[3]/div[2]/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Popular')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5afb5686-27aa-42b2-98f7-d9761302ef8d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Install Now",
+      "targets": [
+        ["linkText=Install Now", "linkText"],
+        ["css=.plugin-card-elementor .install-now", "css:finder"],
+        ["xpath=//a[contains(text(),'Install Now')]", "xpath:link"],
+        ["xpath=//div[@id='the-list']/div/div/div[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8889/wp-admin/update.php?action=install-plugin&plugin=elementor&_wpnonce=455ca2b4df']", "xpath:href"],
+        ["xpath=//form/div[2]/div/div/div/div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Install Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56da887a-be23-4768-a9a0-9cb61717a8eb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Activate",
+      "targets": [
+        ["linkText=Activate", "linkText"],
+        ["css=.activate-now", "css:finder"],
+        ["xpath=//a[contains(text(),'Activate')]", "xpath:link"],
+        ["xpath=//div[@id='the-list']/div/div/div[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://localhost:8889/wp-admin/plugins.php?_wpnonce=d999195dbd&action=activate&plugin=elementor/elementor.php']", "xpath:href"],
+        ["xpath=//form/div[2]/div/div/div/div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Activate')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9fb7a62f-8b5c-4d90-8a90-7a07af38f1ef",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["eb90b1f0-0ad2-4259-b782-224f91a261b1"]
+  }],
+  "urls": ["http://localhost:8889/"],
+  "plugins": []
+}
